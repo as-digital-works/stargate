@@ -3,7 +3,7 @@ import { FaqAccordion } from '../components/contact/FaqAccordion'
 import { LocationsMap } from '../components/contact/LocationsMap'
 import { ScrollRevealGroup, ScrollRevealItem } from '../components/ScrollReveal'
 import { site } from '../data/site'
-import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, WhatsAppIcon } from '../components/icons'
+import { MailIcon, MapPinIcon, PhoneIcon, WhatsAppIcon } from '../components/icons'
 
 export function Contact() {
   return (
@@ -34,11 +34,10 @@ export function Contact() {
                   <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
                   {site.address}
                 </p>
-                <p className="flex items-start gap-2">
-                  <ClockIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
-                  {site.hours}
-                </p>
               </div>
+              <p className="mt-2 text-xs text-brand-gray">
+                Hours vary by branch — see the map for each location's hours.
+              </p>
 
               <a
                 href={site.whatsappHref}

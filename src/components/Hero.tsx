@@ -1,9 +1,27 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { site } from '../data/site'
 import { ArrowRightIcon, CalendarIcon } from './icons'
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1600&auto=format&fit=crop'
+const SLIDES = [
+  {
+    src: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop',
+    alt: 'Dubai skyline at sunset',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1600&auto=format&fit=crop',
+    alt: 'Overwater villa on a tropical holiday',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1600&auto=format&fit=crop',
+    alt: 'Airplane wing above the clouds',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1600&auto=format&fit=crop',
+    alt: 'Map and travel gear laid out for trip planning',
+  },
+]
 
 const container = {
   hidden: {},
@@ -15,13 +33,55 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
+function HeroSlideshow() {
+  const [index, setIndex] = useState(0)
+  const reduceMotion = useReducedMotion()
+
+  useEffect(() => {
+    if (reduceMotion) return
+    const id = setInterval(() => {
+      setIndex((prev) => (prev + 1) % SLIDES.length)
+    }, 5000)
+    return () => clearInterval(id)
+  }, [reduceMotion])
+
+  return (
+    <div className="absolute inset-0">
+      <AnimatePresence>
+        <motion.div
+          key={SLIDES[index].src}
+          role="img"
+          aria-label={SLIDES[index].alt}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${SLIDES[index].src})` }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: 'easeInOut' }}
+        />
+      </AnimatePresence>
+
+      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+        {SLIDES.map((slide, slideIndex) => (
+          <button
+            key={slide.src}
+            type="button"
+            aria-label={`Show slide ${slideIndex + 1}`}
+            onClick={() => setIndex(slideIndex)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              slideIndex === index ? 'w-6 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/60'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function Hero() {
   return (
     <section className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden pt-20 lg:pt-24">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
-      />
+      <HeroSlideshow />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
 

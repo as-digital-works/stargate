@@ -1,9 +1,8 @@
 import { AboutBanner } from '../components/about/AboutBanner'
-import { TeamCard } from '../components/about/TeamCard'
 import { Timeline } from '../components/about/Timeline'
 import { MapPinIcon } from '../components/icons'
 import { ScrollRevealGroup, ScrollRevealItem } from '../components/ScrollReveal'
-import { mission, story, team, values, vision } from '../data/about'
+import { mission, story, values, vision } from '../data/about'
 import { branches } from '../data/site'
 
 export function About() {
@@ -103,31 +102,11 @@ export function About() {
                 </span>
                 <h3 className="mt-4 text-base font-bold text-brand-dark">{branch.name}</h3>
                 <p className="mt-1 text-sm text-brand-gray">{branch.address}</p>
+                <p className="mt-2 text-sm text-brand-gray">{branch.hours}</p>
                 <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-brand-green">
                   Since {branch.opened}
                 </p>
               </div>
-            </ScrollRevealItem>
-          ))}
-        </ScrollRevealGroup>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-10">
-        <ScrollRevealGroup className="mx-auto max-w-2xl text-center">
-          <ScrollRevealItem>
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-green">Our Team</p>
-          </ScrollRevealItem>
-          <ScrollRevealItem>
-            <h2 className="mt-3 text-3xl font-bold text-brand-dark sm:text-4xl">
-              The People Behind Star Gate
-            </h2>
-          </ScrollRevealItem>
-        </ScrollRevealGroup>
-
-        <ScrollRevealGroup className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {team.map((member) => (
-            <ScrollRevealItem key={member.role}>
-              <TeamCard role={member.role} />
             </ScrollRevealItem>
           ))}
         </ScrollRevealGroup>

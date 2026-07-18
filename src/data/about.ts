@@ -19,10 +19,3 @@ export const timeline = [
   { year: '2021', event: 'Opened second branch inside Lulu Village, Muhaisnah 4' },
   { year: '2023', event: 'Opened third branch in Muwailah, Sharjah' },
 ]
-
-export const team = [
-  { role: 'Founder & Managing Director' },
-  { role: 'Head of Visa Services' },
-  { role: 'Corporate Travel Manager' },
-  { role: 'Senior Travel Consultant' },
-]

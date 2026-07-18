@@ -113,7 +113,9 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p>{site.hours}</p>
+          <Link to="/contact" className="hover:text-white">
+            Hours vary by branch — see locations &amp; hours
+          </Link>
         </div>
       </div>
     </footer>

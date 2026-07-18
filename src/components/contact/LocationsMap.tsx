@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { branches } from '../../data/site'
-import { MapPinIcon } from '../icons'
+import { ClockIcon, MapPinIcon } from '../icons'
 
 export function LocationsMap() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -35,10 +35,16 @@ export function LocationsMap() {
         referrerPolicy="no-referrer-when-downgrade"
       />
 
-      <p className="flex items-start gap-2 px-4 py-3 text-xs text-brand-gray">
-        <MapPinIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green" />
-        {active.address}
-      </p>
+      <div className="space-y-1.5 px-4 py-3">
+        <p className="flex items-start gap-2 text-xs text-brand-gray">
+          <MapPinIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green" />
+          {active.address}
+        </p>
+        <p className="flex items-start gap-2 text-xs text-brand-gray">
+          <ClockIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green" />
+          {active.hours}
+        </p>
+      </div>
     </div>
   )
 }

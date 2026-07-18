@@ -25,7 +25,7 @@ export function FeaturedPackages() {
         </ScrollRevealItem>
       </ScrollRevealGroup>
 
-      <ScrollRevealGroup className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ScrollRevealGroup className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {packages.map((pkg) => (
           <ScrollRevealItem key={pkg.slug}>
             <PackageCard pkg={pkg} onSelect={setSelected} />

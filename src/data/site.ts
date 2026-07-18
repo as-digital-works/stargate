@@ -11,27 +11,29 @@ export const site = {
   phoneHref: 'tel:+971549936771',
   whatsappDisplay: '+971 54 993 6771',
   whatsappHref: 'https://wa.me/971549936771',
-  email: 'info@stargatetravel.ae',
-  address: 'Muhaisnah 2, Al Qusais, Dubai, UAE',
-  hours: 'Sunday–Thursday, 9:00 AM – 7:00 PM',
+  email: 'dxb@stargatetours.ae',
+  address: 'Shop No. 76A, Nasser Loothah Building, Al Tawar 1 (near DAFZA Metro Station), Dubai, UAE',
 }
 
 export const branches = [
   {
     name: 'Al Qusais (Head Office)',
-    address: 'Muhaisnah 2, Al Qusais, Dubai, UAE',
+    address: 'Shop No. 76A, Nasser Loothah Building, Al Tawar 1 (near DAFZA Metro Station), Dubai, UAE',
+    hours: 'Monday–Saturday, 9:30 AM – 6:30 PM',
     opened: 2019,
     mapQuery: 'Star Gate Tourism & Travel LLC, Al Qusais, Dubai',
   },
   {
     name: 'Lulu Village, Muhaisnah 4',
     address: 'Lulu Village, Muhaisnah 4, Dubai, UAE',
+    hours: 'Every day, 10:00 AM – 11:00 PM',
     opened: 2021,
     mapQuery: 'Star Gate Tourism & Travel, Lulu Village, Muhaisnah 4, Dubai',
   },
   {
     name: 'Muwailah, Sharjah',
     address: 'Muwailah, Sharjah, UAE',
+    hours: 'Mon–Sat, 9:00 AM – 10:00 PM · Sunday, 4:00 PM – 10:00 PM',
     opened: 2023,
     mapQuery: 'Star Gate Tourism LLC, Muwailah, Sharjah',
   },
