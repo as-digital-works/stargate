@@ -8,14 +8,6 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: 'Rahul Samuel',
-    role: 'Business Traveler',
-    source: 'Google Review',
-    quote:
-      'Great people at Star Gate, absolute pleasure dealing with Jeff. I use them regularly for visit visa when on business trips to the UAE. They have even managed to help me with processing a last minute request. Very precise with documentation and always follow through with timely communication.',
-    rating: 5,
-  },
-  {
     name: 'Runa Simon',
     role: 'Family Travel',
     source: 'Google Review',
