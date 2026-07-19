@@ -61,7 +61,11 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Star Gate Tourism & Travel LLC" className="h-10 w-auto sm:h-11" />
+          <img
+            src={logo}
+            alt="Star Gate Tourism & Travel LLC"
+            className="h-12 w-auto saturate-125 drop-shadow-[0_3px_8px_rgba(0,0,0,0.18)] sm:h-14"
+          />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">

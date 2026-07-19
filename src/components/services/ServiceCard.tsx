@@ -20,7 +20,9 @@ export function ServiceCard({
       >
         <Icon className="h-6 w-6" />
       </motion.span>
-      <h3 className="mt-4 text-lg font-bold text-brand-dark">{service.title}</h3>
+      <h3 className="mt-4 inline-block rounded-lg bg-brand-green/10 px-3 py-1.5 text-lg font-bold text-brand-dark-green">
+        {service.title}
+      </h3>
       <p className="mt-2 flex-1 text-sm text-brand-gray">{service.short}</p>
       {service.variants && (
         <div className="mt-3 flex flex-wrap gap-1.5">

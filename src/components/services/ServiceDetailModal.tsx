@@ -22,7 +22,9 @@ export function ServiceDetailModal({
     <Modal open={service !== null} onClose={onClose}>
       {service && (
         <div>
-          <h2 className="text-2xl font-bold text-brand-dark">{service.title}</h2>
+          <h2 className="inline-block rounded-lg bg-brand-green/10 px-3 py-1.5 text-2xl font-bold text-brand-dark-green">
+            {service.title}
+          </h2>
           <p className="mt-4 text-sm leading-relaxed text-brand-gray">{service.description}</p>
 
           {service.variants && (
