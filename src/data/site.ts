@@ -48,7 +48,7 @@ export const sisterCompanies = [
       { display: '+971 54 993 6771', href: 'tel:+971549936771' },
       { display: '+971 56 681 7584', href: 'tel:+971566817584' },
     ],
-    mapQuery: 'Prime Point Documents Clearing LLC, Montana Building, Zabeel Street, Al Karama, Dubai',
+    mapQuery: '25.249485,55.309370',
   },
 ] as const
 
