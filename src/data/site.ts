@@ -39,6 +39,19 @@ export const branches = [
   },
 ] as const
 
+export const sisterCompanies = [
+  {
+    tabLabel: 'Prime Point',
+    name: 'Prime Point Documents Clearing LLC',
+    address: 'First Floor, Office No. 103, Montana Building, Zabeel Street, Al Karama, Dubai, UAE',
+    phones: [
+      { display: '+971 54 993 6771', href: 'tel:+971549936771' },
+      { display: '+971 56 681 7584', href: 'tel:+971566817584' },
+    ],
+    mapQuery: 'Prime Point Documents Clearing LLC, Montana Building, Zabeel Street, Al Karama, Dubai',
+  },
+] as const
+
 export const SERVICE_NAMES = [
   'UAE Tourist Visa',
   'Visa Change By Bus',
